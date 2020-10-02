@@ -6,12 +6,17 @@ Application test in Symfony. The goal is to let the user being able to manage th
 
 - Forms
 - Database connection (with Wamps on windows)
+- Add books in the database
+- Delete books from the table on the app.
 
 ## TODO
 
-- The form outputs in the database
-- Redirect the user after adding a book to another page
+- Edit the books
 - CSS
+
+## Plugin used
+
+HTTP foundation, Twig, Forms, Database Doctrine ORM, Twig intl-extra
 
 ## Credits
 

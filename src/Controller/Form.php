@@ -17,23 +17,32 @@ use Symfony\Component\HttpFoundation\Request;
 class Form extends AbstractController{
 
 	/**
-	 * @Route("/form/new")
+	 * @Route("/",methods={"POST"})
 	*/
-	public function new(Request $request){
+	public function new(Request $request)
+	{
 		$book = new Livre();
 		// Creation of the form
 		$form = $this->createForm(BookForm::class,$book);
 		$form ->handleRequest($request);
-		if ($form ->isSubmitted() && $form->isValid()) {
+		if ($form ->isSubmitted() && $form->isValid()) 
+		{
 			// If all the fields have been filled with valid options 
-			$task = $form ->getData();
+			//$task = $form ->getData();
+			$entityManager = $this ->getDoctrine()->getManager();
+			$entityManager ->persist($book);
+			$entityManager->flush();
 
+			$this ->addFlash('Book Added','Added');
+			return $this->redirectToRoute('admin_book');
 			// to visualize the output
-			dump($book);
+			//dump($book);
+
 		}
 
 		// Rendering the form
-		return $this->render('Book/new.html.twig',['form'=> $form->createView(),
+		return $this->render('Book/form.html.twig',
+			['form'=> $form->createView(),
 		]);
 
 	}

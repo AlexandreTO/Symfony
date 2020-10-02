@@ -1,0 +1,38 @@
+{# templates/Book/new.html.twig #}
+{% extends 'base.html.twig' %}
+{% block content %}
+{{ form_start(form) }}
+    <br/>
+    <div>
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="form-control">
+        <div class="col">
+            {{form_label(form.author)}}
+            {{ form_widget(form.author) }}
+        </div>
+        <br/>
+         <div class="col">
+            {{form_label(form.title)}}
+            {{ form_widget(form.title) }}
+        </div>
+        <br/>
+        <div class="col">
+            {{form_label(form.datePublish)}}
+            {{ form_widget(form.datePublish)}}
+        </div>
+        <br/>
+        <div class="col" >
+            {{form_label(form.date)}}
+            {{ form_widget(form.date) }}
+        </div>
+        <br/>
+         <div class="col">
+            {{form_label(form.dateLastEdit)}}
+            {{ form_widget(form.dateLastEdit) }}
+        </div>
+        <br/>
+    </div>
+{{ form_end(form) }}
+{% endblock %}
