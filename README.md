@@ -12,6 +12,8 @@ Application test in Symfony. The goal is to let the user being able to manage th
 ## TODO
 
 - Edit the books
+- User log in
+- Add button to return to the forms
 - CSS
 
 ## Plugin used
