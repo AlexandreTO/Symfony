@@ -1,0 +1,30 @@
+{# templates/Book/new.html.twig #}
+
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="form-control">
+        <div class="col">
+            {{ form_row(form.author) }}
+        </div>
+        <br/>
+         <div class="col">
+            {{ form_row(form.title) }}
+        </div>
+        <br/>
+        <div class="col">
+            {{ form_row(form.datePublish) }}
+        </div>
+        <br/>
+        <div class="col" >
+            {{ form_row(form.date) }}
+        </div>
+        <br/>
+         <div class="col">
+            {{ form_row(form.dateLastEdit) }}
+        </div>
+        <br/>
+    </div>
+{{ form_end(form) }}
