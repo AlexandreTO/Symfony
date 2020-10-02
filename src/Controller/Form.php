@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Book;
+use App\Entity\Livre;
 use App\Form\BookForm;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 //use Symfony\Component\Routing\Annotation\Route;
@@ -20,7 +20,7 @@ class Form extends AbstractController{
 	 * @Route("/form/new")
 	*/
 	public function new(Request $request){
-		$book = new Book();
+		$book = new Livre();
 		// Creation of the form
 		$form = $this->createForm(BookForm::class,$book);
 		$form ->handleRequest($request);
