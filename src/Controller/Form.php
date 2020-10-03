@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Request;
 class Form extends AbstractController{
 
 	/**
-	 * @Route("/",methods={"GET","POST"})
+	 * @Route("/",methods={"GET","POST"},name="homepage")
 	*/
 	public function new(Request $request)
 	{

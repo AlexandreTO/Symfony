@@ -13,11 +13,16 @@
     <body>
         {% block header %}
         <div class="header">
-            <h1>Book</h1>
+             <ul>
+                <li><a href="{{path('homepage')}}" >Form</a></li>
+                <li><a href="{{path('admin_book')}}" >Book List</a></li>
+                <li style="float:right"><a>TO Alexandre</a></li>
+            </ul> 
         </div> 
         {% endblock %}
+        <br/>
         {% block body %}
-        <div id="content">
+        <div id="body_content">
             {% block content %}{% endblock %}
         </div>
         {% endblock %}

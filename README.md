@@ -8,12 +8,12 @@ Application test in Symfony. The goal is to let the user being able to manage th
 - Database connection (with Wamps on windows)
 - Add books in the database
 - Delete books from the table on the app.
+- Buttons to link pages
 
 ## TODO
 
 - Edit the books
 - User log in
-- Add button to return to the forms
 - CSS
 
 ## Plugin used
