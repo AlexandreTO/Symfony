@@ -30,10 +30,12 @@ class Form extends AbstractController{
 			// If all the fields have been filled with valid options 
 			//$task = $form ->getData();
 			$entityManager = $this ->getDoctrine()->getManager();
+			$book -> setDate(new \DateTime('now'));
+			$book -> setDateLastEdit(new \DateTime('now'));
 			$entityManager ->persist($book);
 			$entityManager->flush();
 
-			$this ->addFlash('Book Added','Added');
+			$this ->addFlash('success','Added');
 			return $this->redirectToRoute('admin_book');
 			// to visualize the output
 			//dump($book);
@@ -44,9 +46,7 @@ class Form extends AbstractController{
 		return $this->render('Book/form.html.twig',
 			['form'=> $form->createView(),
 		]);
-
 	}
-
 
 }
 
