@@ -1,0 +1,31 @@
+{# templates/Book/new.html.twig #}
+{% extends 'base.html.twig' %}
+{% block content %}
+	<h1> Edit the book </h1>
+	{{ form_start(edit) }}
+    <br/>
+    <div>
+        {{ form_errors(edit) }}
+    </div>
+
+    <div class="form-control">
+        <div class="col">
+            {{form_label(edit.author)}}
+            {{ form_widget(edit.author) }}
+        </div>
+        <br/>
+         <div class="col">
+            {{form_label(edit.title)}}
+            {{ form_widget(edit.title) }}
+        </div>
+        <br/>
+        <div class="col">
+            {{form_label(edit.datePublish)}}
+            {{ form_widget(edit.datePublish)}}
+        </div>
+        <br/>
+        <button type="submit" class="button1">Update the book !</button>
+    </div>
+    <br/>
+{{ form_end(edit) }}
+{% endblock %}

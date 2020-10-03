@@ -17,6 +17,7 @@
             <td> {{livre.datePublish|format_datetime('short','none',locale='fr')}}</td>
             <td> {{livre.dateLastEdit | format_datetime('short','none',locale='fr')}}</td>
             <td><a href="{{ path('delete_book', {'id': livre.Id}) }}" class="button"> Delete </a></td>
+            <td><a href="{{ path('edit_book', {'id': livre.Id})}}" class="button"> Edit </a></td>
         </tr>
 
         {% endfor %}

@@ -14,7 +14,8 @@ class DeleteController extends AbstractController{
 
 	 */
 
-	// Delete the entry in the database when pressing the button
+	// Delete the entry in the database when pressing the button Delete
+
 	public function delete($id){
 		$entityManager = $this -> getDoctrine()->getManager();
 		$book = $entityManager->getRepository(Livre::class)->find($id);

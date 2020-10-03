@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Book;
+use App\Entity\Livre;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -19,9 +19,8 @@ class BookForm extends AbstractType{
 			->add('author',TextType::class)
 			->add('title',TextType::class)
 			->add('datePublish',DateType::class)
-			->add('date',DateType::class)
-			->add('dateLastEdit',DateType::class)
-			->add('save',SubmitType::class,['label' =>'Create book'])
+			// ->add('date',DateType::class) date when the book was added in the dashboard /database
+			//->add('dateLastEdit',DateType::class) date when the book was edited by the user, set to the day when it is edited
 		;
 	}
 
