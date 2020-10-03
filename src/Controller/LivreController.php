@@ -12,6 +12,8 @@ class LivreController extends AbstractController{
 	/**
 	 * @Route("/list/",name="admin_book",methods={"GET"})
 	 */
+
+	// Fetch all the informations in the database to display them
 	public function show(){
 		$book = $this->getDoctrine()
 			->getRepository(Livre::Class)
@@ -23,5 +25,4 @@ class LivreController extends AbstractController{
 		return $this->render('Book/list.html.twig',['book'=>$book]);
 	}
 }
-
 
