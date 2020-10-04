@@ -12,11 +12,11 @@
     </head>
         <!-- Fonts -->
     <body>
-        {% block header %}
+    {% block header %}
         <div class="header">
              <ul>
-                <li><a href="{{path('homepage')}}" >Form</a></li>
-                <li><a href="{{path('admin_book')}}" >Book List</a></li>
+                <li><a href="{{path('add_book')}}" >Add a book</a></li>
+                <li><a href="{{path('homepage')}}" >Book List</a></li>
                 <li style="float:right">
                 {% if app.user %}
                     <a href="{{ path('app_logout') }}"><i class="fas fa-sign-out-alt"></i></a>
@@ -35,12 +35,22 @@
         <br/>
         {% block body %}
         <div id="body_content">
-            {% block content %}{% endblock %}
+            {% block content %}{% endblock %}   
+            <br/>
+            {% for label, messages in app.flashes(['success','info']) %}
+                {% for message in messages %}
+                    <div class="flash-{{label}}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
         </div>
-        {% endblock %}
+    {% endblock %}
     </body>
 
     <div class="footer">
         <p>© Alexandre TO 2020</p>
     </div>
+
+
 </html>

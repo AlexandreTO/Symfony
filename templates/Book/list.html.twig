@@ -19,12 +19,10 @@
             <td> {{livre.datePublish|format_datetime('short','none',locale='fr')}}</td>
             <td> {{livre.dateLastEdit | format_datetime('short','none',locale='fr')}}</td>
             <td><a href="{{ path('edit_book', {'id': livre.Id})}}" class="edit"><i class="fas fa-edit"></i></a></td>
-            <td><a href="{{ path('delete_book', {'id': livre.Id}) }}" class="delete"><i class="fas fa-trash"></i></a></td>
+            <td><a href="{{ path('delete_book', {'id': livre.Id}) }}" class="delete" onclick="return confirm('Are you sure ?')"><i class="fas fa-trash"></i></a></td>
         </tr>
 
         {% endfor %}
     </table>
     <br/>
-
-
 {% endblock %}

@@ -17,11 +17,11 @@ use Symfony\Component\HttpFoundation\Request;
 class Form extends AbstractController{
 
 	/**
-	 * @Route("/",methods={"GET","POST"},name="homepage")
+	 * @Route("/add",methods={"GET","POST"},name="add_book")
 	*/
 	public function new(Request $request)
 	{
-		$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY'); // Restrict the page unless the user is connected to his account.
+		$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 		$book = new Livre();
 		// Creation of the form
 		$form = $this->createForm(BookForm::class,$book);
@@ -36,7 +36,8 @@ class Form extends AbstractController{
 			$entityManager ->persist($book);
 			$entityManager->flush();
 
-			return $this->redirectToRoute('admin_book');
+			$this->addFlash('success','Book added !');
+			return $this->redirectToRoute('homepage');
 			// to visualize the output
 			//dump($book);
 

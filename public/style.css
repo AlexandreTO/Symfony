@@ -123,3 +123,23 @@ input[type=text],input[type=password] {
   color: white;
   text-align: center;
 }
+
+.flash-success{
+  border: 1px solid green;
+  color:black;
+  border-radius: 25px;
+  max-width:320px;
+  margin:0 auto;
+  padding: 10px 20px;
+  background-color:green;
+}
+
+.flash-info{
+  border: 1px solid orange;
+  color:black;
+  border-radius: 25px;
+  max-width:320px;
+  margin:0 auto;
+  padding: 10px 20px;
+  background-color:orange;
+}

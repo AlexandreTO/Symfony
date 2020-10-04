@@ -19,8 +19,6 @@ class BookForm extends AbstractType{
 			->add('author',TextType::class)
 			->add('title',TextType::class)
 			->add('datePublish',DateType::class)
-			// ->add('date',DateType::class) date when the book was added in the dashboard /database
-			//->add('dateLastEdit',DateType::class) date when the book was edited by the user, set to the day when it is edited
 		;
 	}
 
@@ -28,7 +26,7 @@ class BookForm extends AbstractType{
 
 	public function configureOptions(OptionsResolver $resolver){
 		$resolver -> setDefaults([
-			'date_class'=> Taches::class,
+			'date_class'=> Livre::class,
 		]);
 	}
 }
