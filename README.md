@@ -4,7 +4,7 @@ Application test in Symfony. The goal is to let the user being able to manage th
 
 The user can add books with the author, title and the date when the book got published. The app will add the current date automatically when the book was added in the database. Same for when the user edits the book entry in the database (the date will updated to the current one if the day is different).
 
-The user **will** be asked to log in before being able to add a book or even see the list of the books in the database.
+The user **will** be asked to log in before being able to add ,delete or edit a book.
 
 ## Done
 
