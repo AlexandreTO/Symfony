@@ -15,6 +15,7 @@ class LivreController extends AbstractController{
 
 	// Fetch all the informations in the database to display them
 	public function show(){
+		$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 		$book = $this->getDoctrine()
 			->getRepository(Livre::Class)
 			->findAll();
