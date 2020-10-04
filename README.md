@@ -20,6 +20,7 @@ The user **will** be asked to log in before being able to add a book or even see
 ## TODO
 
 - More CSS
+- Try to make the date picker looks better but...
 
 ## Bundles used
 
