@@ -21,6 +21,7 @@ class Form extends AbstractController{
 	*/
 	public function new(Request $request)
 	{
+		$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY'); // Restrict the page unless the user is connected to his account.
 		$book = new Livre();
 		// Creation of the form
 		$form = $this->createForm(BookForm::class,$book);

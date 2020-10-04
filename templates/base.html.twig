@@ -16,7 +16,18 @@
              <ul>
                 <li><a href="{{path('homepage')}}" >Form</a></li>
                 <li><a href="{{path('admin_book')}}" >Book List</a></li>
-                <li style="float:right"><a>TO Alexandre</a></li>
+                <li style="float:right">
+                {% if app.user %}
+                    <a href="{{ path('app_logout') }}">Logout</a>
+                {% endif %}
+            </li>
+            <li style="float:right">
+                <a>
+                    {% if app.user %}
+                    Bonjour  {{ app.user.username }} !
+                    {% endif %}
+                </a>
+            </li>
             </ul> 
         </div> 
         {% endblock %}
