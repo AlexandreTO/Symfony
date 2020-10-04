@@ -15,8 +15,7 @@ The user can add books with the author, title and the date when the book got pub
 
 ## TODO
 
-- Maybe add some images ?
-- User log in
+- User log in (hashed passwords)
 - more css
 
 ## Plugin used
