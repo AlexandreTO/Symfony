@@ -36,7 +36,6 @@ class Form extends AbstractController{
 			$entityManager ->persist($book);
 			$entityManager->flush();
 
-			$this ->addFlash('success','Added');
 			return $this->redirectToRoute('admin_book');
 			// to visualize the output
 			//dump($book);

@@ -1,10 +1,14 @@
 #body_content{
   margin:auto;
-  width: 50%
-  padding: 10px;
+  width: 50;
   text-align: center;
 }
 
+body{
+  margin:0;
+  background-color: #36393f;
+  color:white;
+}
 
 .form-control{
   width: 150px;
@@ -24,8 +28,8 @@
 ul{
   list-style-type: none;
   margin:0;
-  padding: 0;
-  background-color: #dddddd;
+  padding:0;
+  background-color: #202225;
   overflow: hidden;
 }
 
@@ -35,36 +39,62 @@ li{
 
 li a{
   display: block;
-  color:black;
+  color:white;
   text-align:center;
   padding:20px 19px;
   text-decoration: none;
 }
 
 
+li a:hover{
+  background-color:#111;
+}
 table {
-  border: 1px solid black;
+  border-collapse: collapse;
   margin:auto;
 }
 
 th, td {
   padding: 15px;
-  text-align: left;
 }
 
 th {
-  background-color: #4CAF50;
+  background-color: #202225;
   color: white;
 }
 
+
+.delete, .edit{
+  color:white;
+  transition: 0.2s;
+}
+
+.delete:hover{
+  color: red;
+}
+
+.edit:hover{
+  color:yellow;
+}
+
+.icon{
+  margin-right: 7px;
+}
 .button1{
   margin:auto;
   text-align: center;
   border: 1px solid black;
-  padding: 5px 20px;
-  background-color :#008CBA;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color :#4d78cc;
   color:white;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+
+.button1:hover{
+  background-color:green;
 }
 
 input[type=text],input[type=password] {
@@ -81,5 +111,15 @@ input[type=text],input[type=password] {
   margin:auto;
   width: 50%
   padding: 10px;
+  text-align: center;
+}
+
+.footer{
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #202225;
+  color: white;
   text-align: center;
 }

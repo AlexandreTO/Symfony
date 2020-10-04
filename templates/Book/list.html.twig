@@ -8,6 +8,8 @@
             <th> Date</th>
             <th> Date Published </th>
             <th> Date Last Edit </th>
+            <th>Edit book</th>
+            <th>Delete book</th>
         </tr>
         {% for livre in book %}
         <tr>
@@ -16,8 +18,8 @@
             <td>{{livre.date |format_datetime('short','none',locale='fr')}}</td>
             <td> {{livre.datePublish|format_datetime('short','none',locale='fr')}}</td>
             <td> {{livre.dateLastEdit | format_datetime('short','none',locale='fr')}}</td>
-            <td><a href="{{ path('delete_book', {'id': livre.Id}) }}" class="button"> Delete </a></td>
-            <td><a href="{{ path('edit_book', {'id': livre.Id})}}" class="button"> Edit </a></td>
+            <td><a href="{{ path('edit_book', {'id': livre.Id})}}" class="edit"><i class="fas fa-edit"></i></a></td>
+            <td><a href="{{ path('delete_book', {'id': livre.Id}) }}" class="delete"><i class="fas fa-trash"></i></a></td>
         </tr>
 
         {% endfor %}

@@ -7,6 +7,7 @@
             <link rel="stylesheet" href="{{asset('style.css')}}">
         {% endblock %}
         <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/51184747da.js" crossorigin="anonymous"></script>
         <title>Welcome !</title>
     </head>
         <!-- Fonts -->
@@ -18,13 +19,13 @@
                 <li><a href="{{path('admin_book')}}" >Book List</a></li>
                 <li style="float:right">
                 {% if app.user %}
-                    <a href="{{ path('app_logout') }}">Logout</a>
+                    <a href="{{ path('app_logout') }}"><i class="fas fa-sign-out-alt"></i></a>
                 {% endif %}
             </li>
             <li style="float:right">
                 <a>
                     {% if app.user %}
-                    Bonjour  {{ app.user.username }} !
+                    <i class="far fa-user icon"></i> Bonjour {{ app.user.username }} !
                     {% endif %}
                 </a>
             </li>
@@ -38,4 +39,8 @@
         </div>
         {% endblock %}
     </body>
+
+    <div class="footer">
+        <p>© Alexandre TO 2020</p>
+    </div>
 </html>
